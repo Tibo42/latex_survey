@@ -1,0 +1,66 @@
+\renewcommand{\name}{QAE}
+
+% Schiano-Lomoriello, S., F. Cury, and D. Da Fons\'eca. "D\'eveloppement et validation du questionnaire d'approche et d'\'evitement en \'education physique et sportive (QAE–EPS)." Revue Europ\'eenne de Psychologie Appliqu\'ee/European Review of Applied Psychology 55.2 (2005): 85-98.
+
+%Communaut\'e et singularit\'e th\'eoriques entre les quatre buts d’accomplissement (d’apr\`es Cury, 2004; Cury et al., 2003b ; Elliot, 1999 ; Elliot et McGregor, 2001)
+
+
+%Valeur de la comp\'etence 
+%Positive 
+%But d’approche de la maîtrise 
+%But d’approche de la performance
+%N\'egative 
+%But d’\'evitement de la maîtrise 
+%But d’\'evitement de la performance
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\lieuRef}[1][mon]{#1 \'etablissement scolaire}
+%\newcounter{Cpt}\setcounter{Cpt}{1}
+%\definecolor{my-color-box}{gray}{1}
+%\setlength{\fboxsep}{5pt}
+%\newcommand{\Qbox}[2][0.85]{\par\noindent{\bf#1.} #2\hspace*{0.4em}}
+%\newcommand{\setspace}{\hspace*{-1.5em}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\styleQAE{\def\AMCbeginQuestion##1##2{\par\noindent{\bf\theCpt.}\hspace*{0.25em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\LikertSeven}[2]{
+\element{\name}{
+{\styleQAE
+\begin{question}{#1}
+	\stepcounter{Cpt}
+  \Qbox{#2}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{my-color-box}{
+		  \textit{Pas vrai}~\hspace{0.6cm}
+		  \mauvaise{\setspace}\bareme{-3}
+		  \mauvaise{\setspace}\bareme{-2}
+		  \mauvaise{\setspace}\bareme{-1}
+		  \mauvaise{\setspace}\bareme{0}
+		  \mauvaise{\setspace}\bareme{1}
+		  \mauvaise{\setspace}\bareme{2}
+		  \bonne{\setspace}\bareme{3}
+		  \hspace{-0.6cm}~\textit{Vrai}
+    }
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\consigne}{
+Indiquez dans quelle mesure chacun des \'enonc\'es suivants sont, selon vous, \textbf{vrai} ou \textbf{pas vrai}\\}
+\renewcommand{\intro}{\vspace{-8ex}}
+%questions:
+\LikertSeven{1-AP}{J'essaie d'\^etre meilleur que les autres \'el\`eves.}
+\LikertSeven{2-AP}{Je veux prouver que je suis plus fort que les autres \'el\`eves.}
+\LikertSeven{3-AP}{Je veux faire mieux que les autres \'el\`eves.}
+\LikertSeven{4-EP}{Je veux \'eviter de montrer que je suis moins bon que les autres \'el\`eves.}
+\LikertSeven{5-EP}{Je veux \'eviter de montrer que je suis mauvais par rapport aux autres \'el\`eves.}
+\LikertSeven{6-EP}{Je veux \'eviter de montrer que je suis moins fort que les autres \'el\`eves.}
+\LikertSeven{7-AM}{Je veux m'am\'eliorer le plus possible.}
+\LikertSeven{8-AM}{Je veux progresser le plus possible.}
+\LikertSeven{9-AM}{Je veux am\'eliorer mes capacit\'es au maximum.}
+\LikertSeven{10-EM}{J'ai peur de ne pas pouvoir progresser.}
+\LikertSeven{11-EM}{J'ai peur de ne pas pouvoir m'am\'eliorer malgr\'e mes efforts.}
+\LikertSeven{12-EM}{Je suis inquiet \`a l'id\'ee de ne pas pouvoir progresser.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

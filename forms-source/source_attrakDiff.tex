@@ -1,0 +1,90 @@
+\renewcommand{\name}{attrakDiff}
+
+
+% in template.tex remove "%" at line 16 for particular geometry
+%\geometry{hmargin=1.75cm,headheight=1cm,headsep=.3cm,footskip=1cm,top=2.5cm,bottom=2.5cm}
+
+\def\styleAttrakDiff{\def\AMCbeginQuestion##1##2{##2\hspace*{0.5em}}}
+\AMCinterBquest=0cm
+\setlength{\fboxsep}{5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\LikertSeven}[3]{
+\element{\name}{
+{\styleAttrakDiff
+\begin{question}{#1}
+  \begin{reponseshoriz}[o]
+  	\parbox{2.75cm}{\centering\textit{#2}}
+  	\fcolorbox{black}{my-color-box}{
+		  \mauvaise{\hspace{-0.2cm}}\bareme{-3}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{-2}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{-1}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{0}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{1}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{2}
+		  \bonne{}\bareme{3}\hspace{-1.45cm}
+    }
+    \parbox{2.75cm}{\centering\textit{#3}}
+  \end{reponseshoriz}
+\end{question}
+}}}
+\renewcommand{\LikertSevenNeg}[3]{
+\element{\name}{
+{\styleAttrakDiff
+\begin{question}{#1}
+  \begin{reponseshoriz}[o]
+  	\parbox{2.75cm}{\centering\textit{#2}}
+  	\fcolorbox{black}{my-color-box}{
+		  \bonne{\hspace{-0.2cm}}\bareme{3}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{2}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{1}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{0}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{-1}
+		  \mauvaise{\hspace{-0.2cm}}\bareme{-2}
+		  \mauvaise{}\bareme{-3}\hspace{-1.45cm}
+    }
+    \parbox{2.75cm}{\centering\textit{#3}}
+  \end{reponseshoriz}
+\end{question}
+}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\consigne}{
+\begin{center}
+
+  Nous souhaitons \'evaluer vos impressions sur le kit robotiques p\'edagogique ErgoJr.\\
+  \vspace{1ex}
+  Ce questionnaire se pr\'esente sous forme de paires de mots pour vous assister dans l'\'evaluation. Chaque paire repr\'esente des contrastes. Les \'echelons entre les deux extr\'emit\'es vous permettent de d\'ecrire l'intensit\'e de la qualit\'e choisie.
+	  
+	Ne pensez aux paires de mots et essayez simplement de donner une r\'eponse spontan\'ee. Vous pourrez avoir l'impression que certains termes ne d\'ecrivent pas correctement le syst\`eme. Dans ce cas, assurez-vous de donner tout de m\^eme une r\'eponse. Gardez \`a l'esprit qu'il n'y a pas de bonne ou mauvaise r\'eponse. Seule votre opinion compte!
+\end{center}
+}
+\renewcommand{\intro}{\vspace{-10ex}}
+%Questions:
+\LikertSevenNeg{1-QP1*}{Humain}{M'isole}
+\LikertSeven{2-QHI1}{M'isole}{Me sociabilise}
+\LikertSevenNeg{3-ATT1*}{Plaisant}{D\'eplaisant}
+\LikertSevenNeg{4-QHS1*}{Original}{Conventionnel}
+\LikertSevenNeg{5-QP2*}{Simple}{Compliqu\'e}
+\LikertSevenNeg{6-QHI2*}{Professionnel}{Amateur}
+\LikertSeven{7-ATT2}{Laid}{Beau}
+\LikertSevenNeg{8-QP3*}{Pratique}{Pas pratique}
+\LikertSevenNeg{9-ATT3*}{Agr\'eable}{D\'esagr\'eable}
+\LikertSeven{10-QP4}{Fastidieux}{Efficace}
+\LikertSevenNeg{11-QHI3*}{De bon go\^ut}{De mauvais go\^ut}
+\LikertSevenNeg{12-QP5*}{Pr\'evisible}{Impr\'evisible}
+\LikertSeven{13-QHI4}{Bas de gamme}{Haut de gamme}
+\LikertSeven{14-QHI5}{M'exclut}{M'int\`egre}
+\LikertSeven{15-QHI6}{Me rapproche des autres}{Me s\'epare des autres}
+\LikertSeven{16-QHI7}{Non pr\'esentable}{Pr\'esentable}
+\LikertSeven{17-ATT4}{Rebutant}{Attirant}
+\LikertSeven{18-QHS2}{Sans imagination}{Cr\'eatif}
+\LikertSevenNeg{19-ATT5*}{Bon}{Mauvais}
+\LikertSeven{20-QP6}{Confus}{Clair}
+\LikertSeven{21-ATT6}{Repoussant}{Attrayant}
+\LikertSevenNeg{22-QHS3*}{Audacieux}{Prudent}
+\LikertSevenNeg{23-QHS4*}{Novateur}{Conservateur}
+\LikertSeven{24-QHS5}{Ennuyeux}{Captivant}
+\LikertSeven{25-QHS6}{Peu exigeant}{Challenging}
+\LikertSevenNeg{26-ATT7*}{Motivant}{D\'ecourageant}
+\LikertSevenNeg{27-QHS7*}{Nouveau}{Commun}
+\LikertSeven{28-QP7}{Incontr\^olable}{Ma\^itrisable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,67 @@
+\renewcommand{\name}{SUS}
+\renewcommand{\systeme}{ce~kit} %a modifier suivant le syst\`eme consid\'er\'e
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\styleSUS{\def\AMCbeginQuestion##1##2{\par\noindent{\bf##1.} ##2\hspace*{0.5em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\LikertSeven}[2]{
+\element{\name}{
+{\styleSUS
+\begin{question}{#1}
+	\stepcounter{Cpt}
+  \Qbox{#2}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{my-color-box}{
+		  \textit{Pas d'accord}~\hspace{0.6cm}
+		  \mauvaise{\setspace}\bareme{-3}
+		  \mauvaise{\setspace}\bareme{-2}
+		  \mauvaise{\setspace}\bareme{-1}
+		  \mauvaise{\setspace}\bareme{0}
+		  \mauvaise{\setspace}\bareme{1}
+		  \mauvaise{\setspace}\bareme{2}
+		  \bonne{\setspace}\bareme{3}
+		  \hspace{-0.6cm}~\textit{D'accord}
+    }
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}}}
+\renewcommand{\LikertSevenNeg}[2]{
+\element{\name}{
+{\styleSUS
+\begin{question}{#1}
+	\stepcounter{Cpt}
+  \Qbox{#2}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{my-color-box}{
+		  \textit{Pas d'accord}~\hspace{0.6cm}
+		  \bonne{\setspace}\bareme{3}
+		  \mauvaise{\setspace}\bareme{2}
+		  \mauvaise{\setspace}\bareme{1}
+		  \mauvaise{\setspace}\bareme{0}
+		  \mauvaise{\setspace}\bareme{-1}
+		  \mauvaise{\setspace}\bareme{-2}
+		  \mauvaise{\setspace}\bareme{-3}
+		  \hspace{-0.6cm}~\textit{D'accord}
+    }
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\consigne}{
+Indiquez dans quelle mesure vous \^etes\\ \textbf{d'accord} ou \textbf{pas d'accord} avec chacun des \'enonc\'es suivants\\}
+\renewcommand{\intro}{\vspace{-5ex}}
+%Questions:
+\LikertSeven{01-frequence}{Je pense que je vais utiliser~\systeme~fr\'equemment.}
+\LikertSevenNeg{02N-complexite}{Je trouve~\systeme~inutilement complexe.}
+\LikertSeven{03-facilite}{Je pense que~\systeme~est facile \`a utiliser.}
+\LikertSevenNeg{04N-aideTech}{Je pense que j'aurai besoin de l'aide d'un technicien pour \^etre capable d'utiliser~\systeme.}
+\LikertSeven{05-fxIntegration}{J'ai trouv\'e que les diff\'erentes fonctions de~\systeme~ont \'et\'e bien int\'egr\'ees.}
+\LikertSevenNeg{06N-incoherences}{Je pense qu'il y a trop d'incoh\'erences dans~\systeme.}
+\LikertSeven{07-approRapide}{J'imagine que la plupart des gens seraient capables d'apprendre \`a utiliser~\systeme~tr\`es rapidement.}
+\LikertSevenNeg{08N-gene}{J'ai trouv\'e~\systeme~tr\`es g\^enant \`a utiliser.}
+\LikertSeven{09-confiance}{Je me sentais tr\`es en confiance en utilisant~\systeme.}
+\LikertSevenNeg{10N-capacite}{J'ai besoin d'apprendre beaucoup de choses avant de pouvoir utiliser~\systeme.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,130 @@
+\renewcommand{\name}{SPP}
+%Self-Perception Profile (SPP) Harter, S. (1982).
+
+%Harter, Susan. "The perceived competence scale for children." Child development (1982): 87-97.
+
+% 6 sub-scale:
+
+% 1b, 7b, 13b , 19, 25b \'ecole (perception des comp\'etences) -Eco
+% 2b, 8, 14b, 20b, 26 Social -Socio
+% 3, 9b, 15, 21, 27b Physique -Phy
+% 4, 10b, 16b, 22b, 28 Appearance -App
+% 5b, 11, 17, 23,29 Conduite -Cond
+% 6b, 12, 18, 24, 30b Valeur de soi (estime de soi globale) -Val
+
+%https://journals.openedition.org/osp/1130?file=1
+%https://sci-hub.tw/10.2307/1129640
+%http://semaphore.uqar.ca/93/1/Annie_D%27Amours_juillet2009.pdf
+%https://journals.openedition.org/osp/1118
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\cible}[1]{#1 jeunes} 
+%\newcounter{Cpt}\setcounter{Cpt}{1}
+%\definecolor{my-color-box}{gray}{1}
+%\setlength{\fboxsep}{7pt}
+%\newcommand{\Qbox}[2][0.85]{\par\noindent{\bf#1.} #2\hspace*{0.4em}}
+%\newcommand{\setspace}{\hspace*{-1.5em}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\styleSPP{\def\AMCbeginQuestion##1##2{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\ProfilA}[4][Certains]{
+\element{\name}{
+{\styleSPP
+\begin{question}{#2}\AMCBoxedAnswers
+	\stepcounter{Cpt}
+  \begin{reponses}[o]
+		\boxput*(0,1){\colorbox{white}{\cible{#1}}}{
+  	\fcolorbox{black}{white}{
+  		\fcolorbox{black}{my-color-box}{\parbox{2.3cm}{
+  				\centering\small\textit{Me ressemble}
+					\mauvaise{Un peu}\bareme{1}
+					\bonne{Beaucoup}\bareme{2}
+			}}
+    	\fcolorbox{white}{white}{\parbox{3.2cm}{\centering #3}
+    	}
+			\fcolorbox{black}{my-color-box}{\parbox{1.1cm}{\centering Mais\\d'autres}
+			}
+    	\fcolorbox{white}{white}{\parbox{3.2cm}{\centering #4}
+    	}
+    	\fcolorbox{black}{my-color-box}{\parbox{2.3cm}{
+					\centering\small\textit{Me ressemble}
+					\mauvaise{Un peu}\bareme{-1}
+					\mauvaise{Beaucoup}\bareme{-2}
+			}}
+    }}
+  \end{reponses}
+\end{question}
+}}}
+\renewcommand{\ProfilB}[4][Certains]{
+\element{\name}{
+{\styleSPP
+\begin{question}{#2}\AMCBoxedAnswers
+	\stepcounter{Cpt}
+  \begin{reponses}[o]
+		\boxput*(0,1){\colorbox{white}{\cible{#1}}}{
+  	\fcolorbox{black}{white}{
+  		\fcolorbox{black}{my-color-box}{\parbox{2.3cm}{
+  				\centering\small\textit{Me ressemble}
+					\mauvaise{Un peu}\bareme{-1}
+					\mauvaise{Beaucoup}\bareme{-2}
+			}}
+    	\fcolorbox{white}{white}{\parbox{3.2cm}{\centering #3}
+    	}
+			\fcolorbox{black}{my-color-box}{\parbox{1.1cm}{\centering Mais\\d'autres}
+			}
+    	\fcolorbox{white}{white}{\parbox{3.2cm}{\centering #4}
+    	}
+    	\fcolorbox{black}{my-color-box}{\parbox{2.3cm}{
+					\centering\small\textit{Me ressemble}
+					\mauvaise{Un peu}\bareme{1}
+					\bonne{Beaucoup}\bareme{2}
+			}}
+    }}
+  \end{reponses}
+\end{question}
+}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\consigne}{
+
+<< \`A qui je ressemble >>\\
+\vspace{2ex}
+Ce qui nous int\'eresse, c'est de savoir ce qu'est chacun de vous, quel type de personne vous \^etes.\\C'est une enqu\^ete, pas un test. Il n'y a ni bonnes ni mauvaises r\'eponses. Puisque \cible{les} sont tr\`es diff\'erents les uns des autres, chacun de vous marquera quelque chose de diff\'erent.\\
+\vspace{2ex}
+Pour chaque \'enonc\'e, deux profils d'individus sont pr\'esent\'es:\\ \textit{\cible{Certains}} \dots profils A \dots \textit{mais d'autres} \dots profils B \dots\\
+\vspace{2ex}
+Apr\`es avoir selectionn\'e un seul de ces deux profils, indiquez si celui-ci vous ressemble\\ \textit{Un peu} ou \textit{Beaucoup}.\\
+\vspace{2ex}
+Pour chacun des \'enonc\'e, vous ne s\'electionnez qu'une seule case.\\Quelquefois la case que vous selectionnerez sera d'un c\^ot\'e de la page, d'autres fois elle sera de l'autre c\^ot\'e, mais vous ne devez cocher qu'une seule case pour chaque phrase.\\Vous ne cochez pas des deux c\^ot\'es, seulement du c\^ot\'e du profil qui vous ressemble le plus.}
+\renewcommand{\intro}{\vspace{-5ex}}
+%questions:
+\ProfilA{1A-Eco}{ont l'impression de bien travailler \`a l'\'ecole}{se demandent s' ils travaillent suffisamment}
+\ProfilB{2B-Socio}{trouvent difficile de se faire des amis}{trouvent que c'est facile}
+\ProfilA{3A-Phy}{se sentent dou\'es pour toutes sortes de sports}{ne se sentent pas tellement dou\'es pour le sport}
+\ProfilA{4A-App}{sont satisfaits de leur taille et de leur poids}{aimeraient bien que leur taille et leur poids soient diff\'erents}
+\ProfilB[Des]{5B-Cond}{sont souvent peu satisfaits de leur conduite}{sont plut\^ot satisfaits de leur conduite}
+\ProfilB[Il y a des]{6B-Val}{qui ne sont pas satisfaits de leur vie}{qui sont satisfaits de leur vie}
+\ProfilB{7B-Eco}{travaillent lentement \`a l'\'ecole}{font leur travail rapidement}
+\ProfilA{8A-Socio}{ont un tas de copains}{n'ont pas tellement de copains}
+\ProfilB{9B-Phy}{voudraient bien \^etre meilleurs en sport}{se sentent assez bons comme \c{c}a}
+\ProfilB[Des]{10B-App}{aimeraient que leur corps soit un peu diff\'erent}{aiment bien le corps qu'ils ont}
+\ProfilA{11A-Cond}{font toujours les choses bien comme il faut}{la plupart du temps, ne font pas les choses comme il faut}
+\ProfilA{12A-Val}{sont, la plupart du temps, contents d'eux-m\^emes}{ne sont souvent pas contents d'eux-m\^emes}
+\ProfilB[Des]{13B-Eco}{oublient souvent ce qu 'ils ont appris}{peuvent se rappeler facilement les choses}
+\ProfilB[Il y a des]{14B-Socio}{qui ont de la peine \`a se faire aimer}{qui savent bien se faire aimer}
+\ProfilA{15A-Phy}{pensent qu 'ils arriveraient \`a faire n'importe quel exercice de gym}{craignent un peu de ne pas r\'eussir les nouveaux exercices}
+\ProfilB[Des]{16B-App}{voudraient bien avoir une apparence un peu diff\'erente}{aiment bien leur apparence}
+\ProfilA{17A-Cond}{font d' habitude les choses comme on leur demande}{ne font pas toujours comme on leur demande}
+\ProfilA{18A-Val}{aiment bien le genre de personne qu'ils sont}{aimeraient souvent \^etre quelqu ' un d'autre}
+\ProfilA[Des]{19A-Eco}{font tr\`es bien leur travail en classe}{ne font pas tr\`es bien leur travail en classe}
+\ProfilB{20B-Socio}{voudraient qu ' il y ait plus de personnes qui les aiment}{pensent que la plupart des personnes les aiment bien}
+\ProfilA{21A-Phy}{trouvent qu ' ils sont meilleurs en sport que leurs copains}{se sentent moins bons qu'eux}
+\ProfilB[Des]{22B-App}{voudraient bien que leur visage ou leurs cheveux soient un peu diff\'erents}{aiment bien leur visage et leurs cheveux comme ils sont}
+\ProfilB{23B-Cond}{font des choses en sachant qu'ils ne devraient pas les faire}{ne font pratiquement jamais des choses qu'ils ne devraient pas faire}
+\ProfilA[Des]{24A-Val}{sont tr\`es contents d'\^etre ce qu'ils sont}{voudraient bien \^etre diff\'erents}
+\ProfilB[A l'\'ecole, certains]{25B-Eco}{ont de la peine \`a imaginer des r\'eponses aux questions}{parviennent presque toujours \`a imaginer}
+\ProfilA{26A-Socio}{sont bien appr\'eci\'es par leurs copains}{ne sont pas tellement appr\'eci\'es}
+\ProfilB[Aux jeux ou aux sports, certains]{27B-Phy}{pr\'ef\`erent regarder plut\^ot que jouer}{pr\'ef\`erent jouer plut\^ot que regarder}
+\ProfilA{28A-App}{pensent qu'ils pr\'esentent bien}{pensent qu'ils ne pr\'esentent pas tellement bien.}
+\ProfilA{29A-Cond}{sont d'habitude tr\`es agr\'eables avec les autres}{pensent qu'ils pourraient parfois \^etre plus agr\'eables}
+\ProfilB{30B-Val}{sont souvent m\'econtents de ce qu'ils font}{sont plut\^ot contents de ce qu ' ils font}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

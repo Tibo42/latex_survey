@@ -1,0 +1,96 @@
+\documentclass{article}
+
+\usepackage[cp1252]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais,bloc]{automultiplechoice}
+\usepackage{multicol}
+
+\usepackage[pdftex,hidelinks,
+	pdfauthor={Thibault Desprez},
+	pdftitle={Étude sur le kit robotique Ergo~JR -- (2018).},
+	pdfsubject={QCM material},
+	pdfkeywords={motivation survey},
+	pdfproducer={Latex with hyperref and Auto Multiple Choice 1.2.1},
+	pdfcreator={pdflatex}]{hyperref}
+
+%\geometry{hmargin=1.75cm,headheight=1cm,headsep=.3cm,footskip=1cm,top=2.5cm,bottom=2.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Import survey files
+
+\input{/Tibo42/latex_survey/forms-source/init_commande.tex}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHOIX DU QUESTIONNAIRE
+% remplace id par, au choix : EME / IMI / POPs / QAE / SPP / SUS / euro_382
+% ET retir "%" devant le \input{file.tex} correspondant.
+\newcommand{\surveyName}{ id }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Import survey files
+%\input{/Tibo42/latex_survey/forms-source/source_EME.tex}
+%\input{/Tibo42/latex_survey/forms-source/source_IMI.tex}
+%\input{/Tibo42/latex_survey/forms-source/source_POPs.tex}
+%\input{/Tibo42/latex_survey/forms-source/source_QAE.tex}
+%\input{/Tibo42/latex_survey/forms-source/source_SPP.tex}
+%\input{/Tibo42/latex_survey/forms-source/source_SUS.tex}
+%\input{/Tibo42/latex_survey/forms-source/source_attrakDiff.tex}
+%\input{/Tibo42/latex_survey/forms-source/source_euro_382.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\exemplaire{1}{
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	Debut de l'en-tête des copies : 
+
+\noindent{\bf  Étude sur le kit robotique Ergo~JR \hfill Desprez, T. (2018).}
+
+\begin{tiny}
+\noindent Pour toutes questions, contact \href{mailto:thibault.desprez@gmail.com}{thibault.desprez@gmail.com} ou sur \href{https://thibaultdesprez.com/}{www.thibaultdesprez.com}.\\
+\end{tiny}
+
+\vspace{-4ex}
+
+\noindent\hrulefill
+\vspace{1ex} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	Codage numéro anonymat
+
+\begin{minipage}{.6\linewidth}
+%$\longrightarrow{}$ 
+Veillez renseigner votre numéro individuel ci-dessous.\\
+\vspace{3ex}
+\champnom{\fbox{
+    \begin{minipage}{.9\linewidth}
+      Numéro individuel : \tiny{(composé de 5 chiffres)}
+      
+      \vspace*{.8cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }}\\
+
+\hfill Puis, coder ce numéro à l'aide des 5 colones ci-contre $\longrightarrow{}$ \\
+\vspace{1ex}
+
+Merci de bien noircir la ou les cases correspondantent à votre réponses pour permettre la bonne identification de celle-ci.\\ Une simple croix ne suffit pas.\\
+\end{minipage}
+\hfill
+\begin{minipage}{.3\linewidth}
+\noindent\AMCcode{etu}{5}\hspace*{\fill}
+\vspace{1ex}
+\end{minipage}
+
+\noindent\hrulefill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	Survey Start
+\vspace{-1ex}
+\begin{center}
+  \consigne % consigne du questionnaire, à modifier dans le fichier source du questinnaire
+\end{center}
+\vspace{-2ex}
+\noindent\hrulefill
+\newline\vspace{1ex}\newline
+\intro % introduction du questionnaire, à modifier dans le fichier source du questinnaire
+\newline\vspace{1ex}\newline
+\setcounter{Cpt}{1}
+\melangegroupe{\surveyName} % mélange les questions
+\restituegroupe{\surveyName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SURVEY End
+\clearpage
+}
+\end{document}

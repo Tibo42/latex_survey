@@ -1,0 +1,131 @@
+\renewcommand{\name}{IMI}
+
+% McAuley, Edward, Terry Duncan, and Vance V. Tammen. "Psychometric properties of the Intrinsic Motivation Inventory in a competitive sport setting: A confirmatory factor analysis." Research quarterly for exercise and sport 60.1 (1989): 48-58.
+
+%Constructing the IMI  for your study . First, decide which of the variables (factors) you want to use, based on what theoretical questions you are addressing. Then, use the items from those factors, randomly ordered. If you use the value/usefulness items, you will need to complete the three items as appropriate. In other words, if you were studying whether the person believes an activity is useful for improving concentration, or becoming a better basketball player, or whatever, then fill in the blanks with that information. If you do not want to refer to a particular outcome, then just truncate the items with its being useful, helpful, or important. Scoring information for the IMI. 
+%To score this instrument, you must first reverse score the items for which an (R) is shown after them. To do that, subtract the item response from 8, and use the resulting number as the item score. Then, calculate subscale scores by averaging across all of the items on that subscale. The subscale scores are then used in the analyses of relevant questions.
+
+%http://www.ravansanji.ir/?std1019IMIfull
+%https://assethub.fso.fullsail.edu/assethub/IntrinsicMotivationInventory_8b9c9880-398f-491b-ad19-45c6007529f2.pdf
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\act}[1][cette]{#1 activit\'e avec le kit Ergo~Jr} 
+%\newcommand{\val}{m'am\'eliorer.}
+%\newcounter{Cpt}\setcounter{Cpt}{1}
+%\definecolor{my-color-box}{gray}{1}
+%\setlength{\fboxsep}{5pt}
+%\newcommand{\Qbox}[2][0.85]{\vspace*{-0.5em}\parbox[t]{#1\textwidth}{#2}}
+%\newcommand{\setspace}{\hspace*{-1.5em}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\styleIMI{\def\AMCbeginQuestion##1##2{\par\noindent{\bf\theCpt.}\hspace*{0.25em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\LikertSeven}[2]{
+\element{\name}{
+{\styleIMI
+\begin{question}{#1}
+	\stepcounter{Cpt}
+  \Qbox{#2}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{my-color-box}{
+		  \textit{Pas d'accord}~\hspace{0.6cm}
+		  \mauvaise{\setspace}\bareme{-3}
+		  \mauvaise{\setspace}\bareme{-2}
+		  \mauvaise{\setspace}\bareme{-1}
+		  \mauvaise{\setspace}\bareme{0}
+		  \mauvaise{\setspace}\bareme{1}
+		  \mauvaise{\setspace}\bareme{2}
+		  \bonne{\setspace}\bareme{3}
+		  \hspace{-0.6cm}~\textit{D'accord}
+    }
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}}}
+\renewcommand{\LikertSevenNeg}[2]{
+\element{\name}{
+{\styleIMI
+\begin{question}{#1}
+	\stepcounter{Cpt}
+  \Qbox{#2}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{my-color-box}{
+		  \textit{Pas d'accord}~\hspace{0.6cm}
+		  \bonne{\setspace}\bareme{3}
+		  \mauvaise{\setspace}\bareme{2}
+		  \mauvaise{\setspace}\bareme{1}
+		  \mauvaise{\setspace}\bareme{0}
+		  \mauvaise{\setspace}\bareme{-1}
+		  \mauvaise{\setspace}\bareme{-2}
+		  \mauvaise{\setspace}\bareme{-3}
+		  \hspace{-0.6cm}~\textit{D'accord}
+    }
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\consigne}{
+Indiquez dans quelle mesure vous \^etes\\ \textbf{d'accord} ou \textbf{pas d'accord} avec chacun des \'enonc\'es suivants\\}
+\renewcommand{\intro}{\vspace{-5ex}}
+%Interest/Enjoyment
+\LikertSeven{1-IP}{J'ai beaucoup aim\'e faire \act{}.} %I enjoyed doing this activity very much
+\LikertSeven{2-IP}{\act[Cette] \'etait amusante \`a faire.} %This activity was fun to do.
+\LikertSevenNeg{3-IP}{Je pensais que \act{} \'etait ennuyeuse.} %I thought this was a boring activity. (R)
+\LikertSevenNeg{4-IP}{\act[Cette] n'a pas retenu mon attention du tout.} %This activity did not hold my attention at all. (R)
+\LikertSeven{5-IP}{Je qualifierais \act{} de tr\`es int\'eressante.} %I would describe this activity as very interesting.
+\LikertSeven{6-IP}{J'ai trouv\'e que \act{} \'etait tr\`es agr\'eable.} %I thought this activity was quite enjoyable.
+\LikertSeven{7-IP}{Pendant que je faisais \act{}, je pensais \`a quel point je l'aimais.} %While I was doing this activity, I was thinking about how much I enjoyed it
+
+%Perceived Competence
+\LikertSeven{1-Comp}{Je pense que je suis plut\^ot bon dans \act{}.} %I think I am pretty good at this activity.
+\LikertSeven{2-Comp}{Je pense que je me suis plut\^ot bien d\'ebrouill\'e dans \act{} par rapport aux autres \'etudiants.} %I think I did pretty well at this activity‚ compared to other students.
+\LikertSeven{3-Comp}{Apr\`es avoir travaill\'e \`a \act{} pendant un certain temps, je me sentais assez comp\'etent.} %After working at this activity for awhile‚ I felt pretty competent.
+\LikertSeven{4-Comp}{Je suis satisfait de ma performance \`a cette t\^ache.} %I am satisfied with my performance at this task.
+\LikertSeven{5-Comp}{J'\'etais assez habile dans \act{}.} %I was pretty skilled at this activity.
+\LikertSevenNeg{6-Comp}{C'\'etait \act[une] que je ne pouvais pas tr\`es bien faire.} %This was an activity that I couldnt do very well.
+
+%Effort/Importance
+\LikertSeven{1-EI}{Je mets beaucoup d'efforts dans ce domaine.} %I put a lot of effort into this.
+\LikertSevenNeg{2-EI}{Je n'ai pas vraiment essay\'e de bien faire \act{}.} %I didnt try very hard to do well at this activity. (R)
+\LikertSeven{3-EI}{J'ai essay\'e tr\`es fort de r\'ealiser \act{}.} %I tried very hard on this activity.
+\LikertSeven{4-EI}{Il \'etait important pour moi de bien faire \`a cette t\^ache.} %It was important to me to do well at this task.
+\LikertSevenNeg{5-EI}{Je n'ai pas mis beaucoup d'\'energie dans cela.} %I didnt put much energy into this. (R)
+
+%Pressure/Tension
+\LikertSevenNeg{1-PT}{Je ne me sentais pas nerveux du tout en faisant cela.} %I did not feel nervous at all while doing this.   (R)
+\LikertSeven{2-PT}{Je me sentais tr\`es tendu en faisant \act{}.} %I felt very tense while doing this activity.
+\LikertSevenNeg{3-PT}{J'\'etais tr\`es d\'etendu en faisant cela.} %I was very relaxed in doing these.   (R)
+\LikertSeven{4-PT}{J'\'etais anxieux en travaillant sur cette t\^ache.} %I was anxious while working on this task.
+\LikertSeven{5-PT}{Je me sentais sous pression en faisant cela.} %I felt pressured while doing these.
+
+%Perceived Choice
+\LikertSeven{1-Choix}{Je crois que j'avais le choix de faire \act{}.} %I believe I had some choice about doing this activity.
+\LikertSevenNeg{2-Choix}{Je sentais que ce n'\'etait pas mon propre choix de faire cette t\^ache.} %I felt like it was not my own choice to do this task. (R)
+\LikertSevenNeg{3-Choix}{Je n'ai pas vraiment eu le choix de faire cette t\^ache.} %I didnt really have a choice about doing this task.   (R)
+\LikertSevenNeg{4-Choix}{Je me sentais comme si je devais le faire.} %I felt like I had to do this.   (R)
+\LikertSevenNeg{5-Choix}{J'ai fait \act{} parce que je n'avais pas le choix.} %I did this activity because I had no choice.   (R)
+\LikertSeven{6-Choix}{J'ai fait \act{} parce que je voulais.} %I did this activity because I wanted to.
+\LikertSevenNeg{7-Choix}{J'ai fait \act{} parce que je devais.} %I did this activity because I had to.   (R)
+
+%Value/Usefulness
+\LikertSeven{1-VU}{Je crois que \act{} pourrait avoir une certaine valeur pour moi.} %I believe this activity could be of some value to me.
+\LikertSeven{2-VU}{Je pense que faire \act{} est utile pour \val} %I think that doing this activity is useful for ______________________
+\LikertSeven{3-VU}{Je pense que c'est important \`a faire parce que \c{c}a peut \val} %I think this is important to do because it can _____________________
+\LikertSeven{4-VU}{Je serais pr\^et \`a le faire encore parce qu'il a une certaine valeur pour moi.} %I would be willing to do this again because it has some value to me.
+\LikertSeven{5-VU}{Je pense que faire \act{} pourrait m'aider \`a \val} %I think doing this activity could help me to _____________________
+\LikertSeven{6-VU}{Je crois que faire \act{} pourrait \^etre b\'en\'efique pour moi.} %I believe doing this activity could be beneficial to me.
+\LikertSeven{7-VU}{Je pense que \act{} est importante.} %I think this is an important activity.
+
+%Relatedness
+%\LikertSevenNeg{1-Re}{Je me sentais vraiment distant de cette personne.} %I felt really distant to this person.   (R)
+%\LikertSevenNeg{2-Re}{Je doute vraiment que cette personne et moi serions jamais amis.} %I really doubt that this person and I would ever be friends.   (R)
+%\LikertSeven{3-Re}{Je me sentais comme si je pouvais vraiment faire confiance \`a cette personne.} %I felt like I could really trust this person.
+%\LikertSeven{4-Re}{Id comme une chance d'interagir avec cette personne plus souvent.} %Id like a chance to interact with this person more often.
+%\LikertSevenNeg{5-Re}{Je pr\'ef\'ererais vraiment ne pas interagir avec cette personne \`a l'avenir.} %I'd really prefer not to interact with this person in the future. (R)
+%\LikertSevenNeg{6-Re}{Je ne me sens pas vraiment capable de faire confiance \`a cette personne.} %I don't feel like I could really trust this person.   (R)
+%\LikertSeven{7-Re}{Il est probable que cette personne et moi pourrions devenir amis si nous interagissions beaucoup.} %It is likely that this person and I could become friends if we interacted a lot.
+%\LikertSeven{8-Re}{Je me sens proche de cette personne.} %I feel close to this person.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

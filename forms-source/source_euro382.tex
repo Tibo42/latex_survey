@@ -1,0 +1,196 @@
+\renewcommand{\name}{euro382}
+\renewcommand{\Qbox}[2][0.85]{\parbox[t]{#1\textwidth}{#2}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\robots}[1][des]{#1~robots} 
+\newcommand{\robot}[1][un]{#1~robot} 
+
+\newcommand{\fig}[2]{
+\begin{minipage}{.4\linewidth}
+    \centering
+    \includegraphics[width=.6\linewidth]{/Tibo42/latex_survey/forms-source/#2} %%%%%%%%%%%% chemin image
+\end{minipage}
+\begin{minipage}{.6\linewidth}
+\begin{question}{#1}
+  \begin{reponses}[o]
+    \bonne{tr\`es bien, \`a l'id\'ee que je me fais \robots.}\bareme{2}
+    \mauvaise{plut\^ot bien, \`a l'id\'ee que je me fais \robots.}\bareme{1}
+    \mauvaise{plut\^ot mal, \`a l'id\'ee que je me fais \robots.}\bareme{-1}
+    \mauvaise{tr\`es mal, \`a l'id\'ee que je me fais \robots.}\bareme{-2}
+    \mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}
+  \end{reponses}
+\end{question}
+\end{minipage}}
+\newcommand{\proposition}[3]{
+\begin{question}{#2}
+  \par\textit{\textbf{Proposition #1.}}\hspace*{1em}\Qbox[0.8]{#3}\vspace*{-5pt}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{white}{
+		  \textit{Pas d'accord}~\hspace{0.6cm}
+		  \mauvaise{}\bareme{-2}
+		  \mauvaise{}\bareme{-1}
+		  \mauvaise{}\bareme{0}
+		  \mauvaise{}\bareme{1}
+		  \bonne{}\bareme{2}
+		  \hspace{-0.6cm}~\textit{D'accord}
+    }
+    \fcolorbox{white}{white}{\mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}}
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}
+\newcommand{\situation}[3]{
+\begin{question}{#2}
+  \par\textit{\textbf{Situation #1.}}\hspace*{1em}\Qbox[0.8]{#3}\vspace*{-10pt}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{white}{
+		  \textit{\`a l'aise}~\hspace{0.2cm}
+		  \mauvaise{}\bareme{-3}
+		  \mauvaise{}\bareme{-2}
+		  \mauvaise{}\bareme{-1}
+		  \mauvaise{}\bareme{0}
+		  \mauvaise{}\bareme{1}
+		  \mauvaise{}\bareme{2}
+		  \bonne{}\bareme{3}
+		  \hspace{-1cm}~\textit{Mal \`a l'aise}
+    }
+    \fcolorbox{white}{white}{\mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}
+    \mauvaise{\textit{\small{Pas applicable}}}\bareme{0}}
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{euro382}{
+
+\begin{question}{10-intere}
+	\Qbox{Veuillez me dire si vous \^etes tr\`es int\'eress\'e(e), moyennement int\'eress\'e(e) ou pas du tout int\'eress\'e(e) par les d\'ecouvertes scientifiques et les \'evolutions technologiques ?}
+  \begin{reponseshoriz}[o]
+  	\fcolorbox{white}{white}{
+    \bonne{tr\`es int\'eress\'e(e)}\bareme{2}
+    \mauvaise{moyennement int\'eress\'e(e)}\bareme{1}
+    \mauvaise{pas du tout int\'eress\'e(e)}\bareme{0}}
+    \fcolorbox{white}{white}{
+    \mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}}
+  \end{reponseshoriz}
+\end{question}
+\begin{question}{20-image}\QuestionIndicative
+	\Qbox{Voici deux images. Pour chacune d'entre elles, veuillez me dire dans quelle mesure elle correspond \`a l'id\'ee que vous vous faites \robots.}
+\end{question}
+{\def\AMCbeginQuestion#1#2{\par\textbf{Cette image correspond} #2\hspace*{1em}}
+\noindent\fig{21-imageA}{QI2_1}
+\fig{22-imageB}{QI2_2}
+}
+
+\begin{questionmultx}{30-utilise}
+	\Qbox{Avez-vous d\'ej\`a utilis\'e, ou utilisez-vous actuellement, \robot de ce type \`a la maison ou sur votre lieu de travail  (par ex. \robot aspirateur chez vous, ou \robot industriel au travail) ? \textsc{\small plusieurs r\'eponses possible}}
+  \begin{reponses}[o]
+  \centering
+  	\begin{multicols}{4}
+		  \bonne{oui \`a la maison}\bareme{3}
+		  \bonne{oui au travail}\bareme{2}
+		  \bonne{oui ailleurs}\bareme{1}
+		  \mauvaise{non}\bareme{-1}
+  	\end{multicols}\vspace*{-8pt}
+    \mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}
+  \end{reponses}
+\end{questionmultx}
+
+\begin{question}{40-vision}
+	\Qbox{De façon g\'en\'erale, avez-vous une image tr\`es positive, plut\^ot positive, plut\^ot n\'egative ou tr\`es n\'egative \robots ?}
+  \begin{reponses}[o]
+  \centering
+    \begin{multicols}{4}
+		  \bonne{tr\`es positive}\bareme{2}
+		  \mauvaise{plut\^ot positive}\bareme{1}
+		  \mauvaise{tr\`es n\'egative}\bareme{-2}
+		  \mauvaise{plut\^ot n\'egative}\bareme{-1}
+		\end{multicols}\vspace*{-8pt}
+  	\mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}
+  \end{reponses}
+\end{question}
+
+\begin{question}{50-proposition}\QuestionIndicative
+	\Qbox{Veuillez me dire dans quelle mesure vous \^etes d'accord ou pas d'accord avec les propositions suivantes concernant \robots[les].}\vspace*{6pt}
+\end{question}\vspace*{-10pt}
+{\def\AMCbeginQuestion#1#2{}
+\proposition{1}{51-}{\robots[les] sont une bonne chose pour la soci\'et\'e, parce qu'ils aident les gens.}
+\proposition{2}{52-}{\robots[les] volent les emplois des gens.}
+\proposition{3}{53-}{\robots[les] sont n\'ecessaires parce qu'ils peuvent effectuer des t\^aches qui sont trop difficiles ou dangereuses pour les gens.}
+\proposition{4}{54-}{\robots[les] sont un type de technologie qui n\'ecessite d'\^etre g\'er\'e avec prudence.}
+\proposition{5}{55-}{L'utilisation \'etendue \robots peut stimuler la cr\'eation d'emplois dans l'UE.}
+}\vspace*{-10pt}
+
+\begin{questionmultx}{60-dom}
+	\Qbox{Dans quels domaines pensez-vous que \robots[les] devraient \^etre utilis\'es en priorit\'e ? \textsc{\small Max. 3 r\'eponses}}
+  \begin{reponses}[o]
+  	\begin{multicols}{2}\AMCBoxedAnswers
+		  \bonne{La fabrication}\bareme{1}
+			\bonne{Les soins de sant\'e}\bareme{1}
+			\bonne{Aux loisirs}\bareme{1}
+			\bonne{Un usage domestique, comme le nettoyage}\bareme{1}
+			\bonne{Les domaines militaire et de la s\'ecurit\'e}\bareme{1}
+			\bonne{Les op\'erations de recherche et sauvetage}\bareme{1}
+			\bonne{L'\'education}\bareme{1}
+			\bonne{"La garde d'enfants, des personnes \^ag\'ees et des personnes en situation de handicap"}\bareme{1}
+			\bonne{L'exploration spatiale}\bareme{1}
+			\bonne{L'agriculture}\bareme{1}
+			\bonne{Le transport la logistique}\bareme{1}
+			\bonne{Aucun}
+  	\end{multicols}\vspace*{-1em}
+    \mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}
+  \end{reponses}
+\end{questionmultx}
+
+\begin{questionmultx}{70-dom-neg}
+	\Qbox{Et, au contraire, dans quels domaines pensez-vous que l'utilisation \robots devrait \^etre rendue ill\'egale ? \textsc{\small Max. 3 r\'eponses}}
+  \begin{reponses}[o]
+  	\begin{multicols}{2}\AMCBoxedAnswers
+		  \bonne{La fabrication}\bareme{1}
+			\bonne{Les soins de sant\'e}\bareme{1}
+			\bonne{Aux loisirs}\bareme{1}
+			\bonne{Un usage domestique, comme le nettoyage}\bareme{1}
+			\bonne{Les domaines militaire et de la s\'ecurit\'e}\bareme{1}
+			\bonne{Les op\'erations de recherche et sauvetage}\bareme{1}
+			\bonne{L'\'education}\bareme{1}
+			\bonne{"La garde d'enfants, des personnes \^ag\'ees et des personnes en situation de handicap"}\bareme{1}
+			\bonne{L'exploration spatiale}\bareme{1}
+			\bonne{L'agriculture}\bareme{1}
+			\bonne{Le transport la logistique}\bareme{1}
+			\bonne{Aucun}
+  	\end{multicols}\vspace*{-1em}
+    \mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}
+  \end{reponses}
+\end{questionmultx}
+
+\begin{question}{80-situation}\QuestionIndicative
+	\Qbox{Veuillez me dire dans quelle mesure vous \^etes \textit{\`a l'aise} ou \textit{mal \`a l'aise} avec cette liste de situation qui pourraient \^etre faites par \robots.}
+\end{question}\vspace*{-8pt}
+{\def\AMCbeginQuestion#1#2{}
+\situation{1}{81-}{Se faire op\'erer par \robot.}
+\situation{2}{82-}{Faire promener son chien par \robot.}
+\situation{3}{83-}{\^etre assist\'e(e) par \robot au travail (par ex. pour la production industrielle).}
+\situation{4}{84-}{Faire garder vos enfants ou vos parents \^ag\'es par \robot.}
+}\vspace*{-8pt}
+
+\begin{question}{90-generalisation}
+  \Qbox{Selon vous, en Europe, quand \robots[les] qui remplissent des t\^aches m\'enag\`eres deviendront-ils une chose courante ?}
+  \begin{reponses}[o]
+  	\begin{multicols}{3}\AMCBoxedAnswers
+			\bonne{dans 5 ans}\bareme{2}
+			\mauvaise{dans plus de 20ans}\bareme{5}
+			\columnbreak
+			\mauvaise{dans 10ans}\bareme{3}
+			\mauvaise{jamais}\bareme{6}
+			\columnbreak
+			\mauvaise{dans 20 ans}\bareme{4}
+			\mauvaise{c'est d\'ej\`a une chose courante}\bareme{1}
+  	\end{multicols}\vspace*{-1em}
+  	\mauvaise{\textit{\small{Ne se prononce pas}}}\bareme{0}
+  \end{reponses}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\consigne}{}
+\renewcommand{\intro}{\vspace{-5ex}}

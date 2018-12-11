@@ -1,0 +1,102 @@
+\renewcommand{\name}{POPs}
+
+% Grolnick, Wendy S., Richard M. Ryan, and Edward L. Deci. "Inner resources for school achievement: Motivational mediators of children's perceptions of their parents." Journal of educational psychology 83.4 (1991): 508.
+
+%Scales
+% 3, 6 (R), 9, 12 (R), 15 (R), 18  		Implication des ref\'erents -Im
+% 1, 2 (R), 5, 8, 11, 14 (R), 17, 19, 21 (R) 	Soutien \`a l'autonomie des ref\'erents -SA
+% 4, 7, 10, 13 (R), 16, 20 (R)			Chaleur des ref\'erents -Ch
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\RefA}[1][Mes]{#1 enseignants} 
+%\newcommand{\RefB}[1][Mes]{#1 parents} 
+%\newcounter{Cpt}\setcounter{Cpt}{1}
+%\definecolor{my-color-box}{gray}{1}
+%\setlength{\fboxsep}{5pt}
+\renewcommand{\Qbox}[2][0.85]{\vspace*{-0.5em}\parbox[t]{#1\textwidth}{#2}}
+%\newcommand{\setspace}{\hspace*{-1.5em}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\stylePOPs{\def\AMCbeginQuestion##1##2{\par\noindent{\bf\theCpt.}\hspace*{0.25em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\LikertSeven}[2]{
+\element{\name}{
+{\stylePOPs
+\begin{question}{#1}
+	\stepcounter{Cpt}
+  \Qbox{#2}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{my-color-box}{
+		  \textit{Pas vrai}~\hspace{0.6cm}
+		  \mauvaise{\setspace}\bareme{-3}
+		  \mauvaise{\setspace}\bareme{-2}
+		  \mauvaise{\setspace}\bareme{-1}
+		  \mauvaise{\setspace}\bareme{0}
+		  \mauvaise{\setspace}\bareme{1}
+		  \mauvaise{\setspace}\bareme{2}
+		  \bonne{\setspace}\bareme{3}
+		  \hspace{-0.6cm}~\textit{Vrai}
+    }
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}}}
+\renewcommand{\LikertSevenNeg}[2]{
+\element{\name}{
+{\stylePOPs
+\begin{question}{#1}
+	\stepcounter{Cpt}
+  \Qbox{#2}
+  \begin{reponseshoriz}[o]
+  \begin{small}
+  	\fcolorbox{black}{my-color-box}{
+		  \textit{Pas vrai}~\hspace{0.6cm}
+		  \bonne{\setspace}\bareme{3}
+		  \mauvaise{\setspace}\bareme{2}
+		  \mauvaise{\setspace}\bareme{1}
+		  \mauvaise{\setspace}\bareme{0}
+		  \mauvaise{\setspace}\bareme{-1}
+		  \mauvaise{\setspace}\bareme{-2}
+		  \mauvaise{\setspace}\bareme{-3}
+		  \hspace{-0.6cm}~\textit{Vrai}
+    }
+  \end{small}
+  \end{reponseshoriz}
+\end{question}
+}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\consigne}{
+Indiquez dans quelle mesure chacun des \'enonc\'es suivants sont, selon vous, \textbf{vrai} ou \textbf{pas vrai}\\}
+\renewcommand{\intro}{\vspace{-8ex}}
+%questions:
+\newcommand\Rtype[2]{
+\LikertSeven{1-#1-SA}{#2~semblent savoir ce que je ressens \`a propos des choses.}
+\LikertSevenNeg{2-#1-SA}{#2~essaient de me dire comment g\'erer ma vie.}
+\LikertSeven{3-#1-Im}{#2~trouvent le temps de parler avec moi.}
+\LikertSeven{4-#1-Ch}{#2~m'acceptent et m'appr\'ecient comme je suis.}
+\LikertSeven{5-#1-SA}{#2~me permettent, autant que possible, de choisir quoi faire.}
+\LikertSevenNeg{6-#1-Im}{#2~ne semblent pas penser \`a moi souvent.}
+\LikertSeven{7-#1-Ch}{#2~transmettent clairement leur affection pour moi.}
+\LikertSeven{8-#1-SA}{#2~\'ecoutent mon opinion ou mon point de vue quand j'ai un probl\`eme.}
+\LikertSeven{9-#1-Im}{#2~passent beaucoup de temps avec moi.}
+\LikertSeven{10-#1-Ch}{#2~me font me sentir tr\`es sp\'ecial.}
+\LikertSeven{11-#1-SA}{#2~me permettent de d\'ecider des choses pour moi-m\^eme.}
+\LikertSevenNeg{12-#1-Im}{#2~semblent souvent trop occup\'es pour s'occuper de moi.}
+\LikertSevenNeg{13-#1-Ch}{#2~sont souvent d\'esapprobateurs et ne m'acceptent pas.}
+\LikertSevenNeg{14-#1-SA}{#2~insistent pour que je fasse les choses \`a leur fa\c{c}on.}
+\LikertSevenNeg{15-#1-Im}{#2~ne sont pas tr\`es impliqu\'es dans mes pr\'eoccupations.}
+\LikertSeven{16-#1-Ch}{#2~sont g\'en\'eralement heureux de me voir.}
+\LikertSeven{17-#1-SA}{#2~sont g\'en\'eralement pr\^ets \`a consid\'erer les choses de mon point de vue.}
+\LikertSeven{18-#1-Im}{#2~mettent du temps et de l'\'energie pour m'aider.}
+\LikertSeven{19-#1-SA}{#2~m'aident \`a choisir ma propre direction.}
+\LikertSevenNeg{20-#1-Ch}{#2~semblent \^etre beaucoup d\'e\c{c}us par moi.}
+\LikertSevenNeg{21-#1-SA}{#2~ne sont pas tr\`es sensibles \`a beaucoup de mes besoins.}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	SET question
+\Rtype{En}{\RefA}
+\copygroup{\name}{\name-enseignants}
+\cleargroup{\name}
+\Rtype{Pa}{\RefB}
+\copygroup{\name}{\name-parents}
+\cleargroup{\name}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

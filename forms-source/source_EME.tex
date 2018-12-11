@@ -1,0 +1,70 @@
+\renewcommand{\name}{EME}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\lieuRef}[1][mon]{#1 \'etablissement scolaire} 
+%\definecolor{my-color-box}{gray}{1}
+%\newcounter{Cpt}\setcounter{Cpt}{1}
+%\setlength{\fboxsep}{5pt}
+%\newcommand{\Qbox}[2][0.85]{\parbox[t]{#1\textwidth}{#2}}
+%\newcommand{\setspace}{\hspace*{-1.5em}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\styleEME{\def\AMCbeginQuestion##1##2{\par\noindent{\bf\theCpt.} ##2\hspace*{0.5em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\LikertSeven}[2]{
+\element{\name}{
+{\styleEME
+\begin{question}{#1}
+	\stepcounter{Cpt}
+  \Qbox{#2}
+  \begin{reponseshoriz}[o]
+  	\begin{small}
+  	\fcolorbox{black}{my-color-box}{
+		  \textit{Ne correspond pas}~\hspace{0.6cm}
+		  \mauvaise{\setspace}\bareme{-3}
+		  \mauvaise{\setspace}\bareme{-2}
+		  \mauvaise{\setspace}\bareme{-1}
+		  \mauvaise{\setspace}\bareme{0}
+		  \mauvaise{\setspace}\bareme{1}
+		  \mauvaise{\setspace}\bareme{2}
+		  \bonne{\setspace}\bareme{3}
+		  \hspace{-0.6cm}~\textit{Correspond}
+    }
+  	\end{small}
+  \end{reponseshoriz}
+\end{question}
+}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\consigne}{
+Indiquez dans quelle mesure chacun des \'enonc\'es suivants\\ \textbf{correspond} ou \textbf{ne correspond pas} \`a votre \'etat d'esprit actuel\\}
+\renewcommand{\intro}{
+Pourquoi vas-tu dans \lieuRef[ton]?
+}
+%Questions:
+\LikertSeven{1-MEreg}{Parce que juste avec un dipl\^ome d'\'etudes secondaires je ne pourrais pas me trouver un emploi assez payant.}
+\LikertSeven{2-MIC}{Parce que j'\'eprouve du plaisir et de la satisfaction \`a apprendre de nouvelles choses.}
+\LikertSeven{3-MEid}{Parce que selon moi des \'etudes post-secondaires vont m'aider \`a mieux me pr\'eparer \`a la carri\`ere que j'ai choisie.}
+\LikertSeven{4-MIS}{Pour les moments intenses que je vis lorsque je suis en train de communiquer mes propres id\'ees aux autres.}
+\LikertSeven{5-AM}{Honn\^etement, je ne le sais pas ; j'ai vraiment l'impression de perdre mon temps dans~\lieuRef.}
+\LikertSeven{6-MIA}{Pour le plaisir que je ressens \`a me surpasser dans mes \'etudes.}
+\LikertSeven{7-MEin}{Pour me prouver \`a moi-m\^eme que je suis capable de faire mieux que juste un secondaire.}
+\LikertSeven{8-MEreg}{Pour pouvoir d\'ecrocher un emploi plus prestigieux plus tard.}
+\LikertSeven{9-MIC}{Pour le plaisir que j'ai \`a d\'ecouvrir de nouvelles choses jamais vues auparavant.}
+\LikertSeven{10-MEid}{Parce qu'\'eventuellement cela va me permettre d'aller sur le march\'e du travail dans un domaine que j'aime.}
+\LikertSeven{11-MIS}{Pour le plaisir que je ressens \`a lire des auteurs int\'eressants.}
+\LikertSeven{12-AM}{J'ai d\'ej\`a eu de bonnes raisons pour aller dans~\lieuRef, mais maintenant je me demande si je devrais continuer \`a y aller.}
+\LikertSeven{13-MIA}{Pour le plaisir que je ressens lorsque je suis en train de me surpasser dans une de mes r\'ealisations personnelles.}
+\LikertSeven{14-MEin}{Parce que le fait de r\'eussir dans~\lieuRef~me permet de me sentir important \`a mes propres yeux.}
+\LikertSeven{15-MEreg}{Parce que je veux pouvoir faire <<la belle vie>> plus tard.}
+\LikertSeven{16-MIC}{Pour le plaisir d'en savoir plus long sur les mati\`eres qui m'attirent.}
+\LikertSeven{17-MEid}{Parce que cela va m'aider \`a mieux choisir mon orientation de carri\`ere.}
+\LikertSeven{18-MIS}{Pour le plaisir que je ressens \`a me sentir compl\`etement absorb\'e-e par ce que certains auteurs ont \'ecrit.}
+\LikertSeven{19-AM}{Je ne parviens pas \`a voir pourquoi je vais dans~\lieuRef~et franchement je m'en fous pas mal.}
+\LikertSeven{20-MIA}{Pour la satisfaction que je vis lorsque je suis en train de r\'eussir des activit\'es scolaires difficiles.}
+\LikertSeven{21-MEin}{Pour me prouver que je suis une personne intelligente.}
+\LikertSeven{22-MEreg}{Pour avoir un meilleur salaire plus tard.}
+\LikertSeven{23-MIC}{Parce que mes \'etudes me permettent de continuer \`a en apprendre sur une foule de choses qui m'int\'eressent.}
+\LikertSeven{24-MEid}{Parce que je crois que quelques ann\'ees d'\'etudes suppl\'ementaires vont augmenter ma comp\'etence comme travailleur-se.}
+\LikertSeven{25-MIS}{Parce que j'aime <<tripper>> en lisant sur diff\'erents sujets int\'eressants}
+\LikertSeven{26-AM}{Je ne le sais pas ; je ne parviens pas \`a comprendre ce que je fais dans~\lieuRef.}
+\LikertSeven{27-MIA}{Parce que~\lieuRef~me permet de vivre de la satisfaction personnelle dans ma recherche de l'excellence dans mes \'etudes.}
+\LikertSeven{28-MEin}{Parce que je veux me prouver \`a moi-m\^eme que je suis capable de r\'eussir dans les \'etudes.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
